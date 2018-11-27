@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Train Schedule</title>
     <!-- Firebase CDN -->
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 
@@ -15,7 +15,7 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    
+
     <!-- Link to Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
@@ -23,77 +23,85 @@
 </head>
 
 <body>
-
-    <div class="container">
-
-        <div class="col-md-12">
-            <div class="panel panel-default panel-primary">
-                <div class="panel-heading">
-                    <b class="panel-title">Current Train Schedule</b>
+<!-- header -->
+<div class="container">
+        <div class="jumbotron text-center bg-dark text-white mt-2">
+                  <h1>Any Time is Train Time</h1>
+                  <h3>Choo Choo.</h3>
                 </div>
-                <div class="panel-body">
-                    <div class="table table-hover table-bordered">
-                        <hr>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Train Name</th>
-                                    <th>Destination</th>
-                                    <th>Frequency</th>
-                                    <th>Next Arrival</th>
-                                    <th>Minutes Away</th>
-                                </tr>
-                            </thead>
-                            <tbody id="schedule">
-                            </tbody>
-                        </table>
+            </div>
+
+<!-- panel for new train schedules added -->
+    <div class="container">
+        <div class="row top-buffer">
+            <div class="col-md-12">
+                <div class="panel panel-default panel-primary">
+                    <div class="panel-heading">
+                        <b class="panel-title">Current Train Schedule</b>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table table-hover">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Destination</th>
+                                        <th>Frequency</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="schedule">
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
-    <!-- panel for the Add A Train form -->
-    <div class="row top-buffer">
-        <div class="col-md-12">
-            <div class="panel panel-default panel-primary">
-                <div class="panel-heading">
-                    <b class="panel-title">Add A Train</b>
-                </div>
-                <div class="panel-body">
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="train-name">Train Name</label>
-                            <input class="form-control" id="train-name" type="text" autofocus>
-                        </div>
 
-                    </form>
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="destination">Destination</label>
-                            <input class="form-control" id="destination" type="text" autofocus>
-                        </div>
+        <!-- panel for the Add A Train form -->
+        <div class="row top-buffer">
+            <div class="col-md-12">
+                <div class="panel panel-default panel-primary">
+                    <div class="panel-heading">
+                        <b class="panel-title">Add A Train</b>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="train-name">Train Name</label>
+                                <input class="form-control" id="train-name" type="text" autofocus>
+                            </div>
 
-                    </form>
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="first-train">First Train Time (HH:mm - military time)</label>
-                            <input class="form-control" id="first-train" type="text" autofocus>
-                        </div>
+                        </form>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input class="form-control" id="destination" type="text" autofocus>
+                            </div>
 
-                    </form>
-                    <form role="form">
-                        <div class="form-group">
-                            <label for="frequency">Frequency</label>
-                            <input class="form-control" id="frequency" type="text" autofocus>
-                        </div>
+                        </form>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="first-train">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control" id="first-train" type="text" autofocus>
+                            </div>
 
-                    </form>
-                    <button class="btn btn-primary" id="submit-button" type="submit" value="Submit">Submit</button>
+                        </form>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="frequency">Frequency</label>
+                                <input class="form-control" id="frequency" type="text" autofocus>
+                            </div>
+
+                        </form>
+                        <button class="btn btn-primary" id="submit-button" type="submit" value="Submit">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <script src="javascript/app.js"></script>
 </body>
