@@ -8,7 +8,7 @@ See deployment for notes on how to deploy the project on a live system.
 
 ## Deployment
 
-Check out the Train Schedule here: https://melikalbasi.github.io/Train-Schedule-App/
+Check out the Train Schedule [here](https://melikalbasi.github.io/train-schedule-app/).
 
 ## Built With
 
